@@ -70,11 +70,11 @@ class AdminHeadlineController extends Controller
      */
     public function store_business(Request $request)
     {   
-        $get_business = Business::orderBy('id', 'Desc')->first();
-        $total = $get_business->id + 1;
+        // $get_business = Business::orderBy('id', 'Desc')->first();
+        // $total = $get_business->id + 1;
 
-        $business_id = 'e' . $total;
-        //$business_id = 'e1';
+        // $business_id = 'b' . $total;
+        $business_id = 'b1';
 
         Business::create([
             'business_id' => $business_id,
