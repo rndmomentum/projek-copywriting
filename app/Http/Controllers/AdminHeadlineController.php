@@ -19,4 +19,14 @@ class AdminHeadlineController extends Controller
     {
         return view('admin.headline.create');
     }
+
+    /**
+     * Add emotion
+     * 
+     * 
+     */
+    public function add_emotion()
+    {
+        return view('admin.headline.emotion');
+    }
 }

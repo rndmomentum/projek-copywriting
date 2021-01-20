@@ -45,5 +45,6 @@ Route::post('admin/check-login', 'AdminController@checklogin');
 #################### Admin Headline Controller ####################
 
 Route::get('admin/headline/create', 'AdminHeadlineController@create_headline');
+Route::get('admin/headline/emotion', 'AdminHeadlineController@add_emotion');
 
 #################### Admin Headline Controller ####################
