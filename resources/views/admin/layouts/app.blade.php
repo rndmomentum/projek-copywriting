@@ -126,14 +126,13 @@
 	</div>
 	<!-- END WRAPPER -->
 	<!-- Javascript -->
-
+	<script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>
 	<script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
 	<script src="{{ asset('assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js') }}"></script>
 	<script src="{{ asset('assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js') }}"></script>
 	<script src="{{ asset('assets/vendor/chartist/js/chartist.min.js') }}"></script>
 	<script src="{{ asset('assets/scripts/klorofil-common.js') }}"></script>
-
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 	@yield('js')
 	<script>
 	$(function() {
