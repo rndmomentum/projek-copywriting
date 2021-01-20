@@ -53,6 +53,9 @@
                     </select>
                 </div>
             </div>
+            <div class="col-md-12 mt-3">
+                <button type="submit" class="btn btn-dark">Submit</button>
+            </div>
         </div>
     </div>
 </div>
