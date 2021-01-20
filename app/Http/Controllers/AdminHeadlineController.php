@@ -27,7 +27,7 @@ class AdminHeadlineController extends Controller
      */
     public function add_emotion()
     {
-        $emotion = Emotion::orderBy('id', 'Desc')->get();
+        $emotion = Emotion::orderBy('id', 'Asc')->get();
 
         return view('admin.headline.emotion', compact('emotion'));
     }
