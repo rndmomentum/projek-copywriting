@@ -62,4 +62,25 @@ class AdminHeadlineController extends Controller
 
         return redirect()->back()->with('success', 'Done update!');
     }
+
+    /**
+     * Store business
+     * 
+     * 
+     */
+    public function store_business(Request $request)
+    {   
+        $get_business = Business::orderBy('id', 'Desc')->first();
+        $total = $get_business->id + 1;
+
+        $business_id = 'e' . $total;
+        //$business_id = 'e1';
+
+        Business::create([
+            'business_id' => $business_id,
+            'business_type' => $request->business,
+        ]);
+
+        return redirect()->back()->with('success', 'Done update!');
+    }
 }

@@ -16,14 +16,17 @@
     </div>
     <div class="panel-body">
         <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <input type="text" class="form-control" name="business" placeholder="Your text here" required>
+            <form action="{{ url('admin/headline/business/store') }}" method="POST">
+                @csrf
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="business" placeholder="Your text here" required>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-12">
-                <button type="submit" class="btn btn-primary pull-right">Submit</button>
-            </div>
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
