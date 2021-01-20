@@ -37,9 +37,9 @@
             <div class="col-md-12">
                 <table class="table table-hover">
                     <thead>
-                        <tr>#</tr>
-                        <tr>Code</tr>
-                        <tr>Type of Emotion</tr>
+                        <th>#</th>
+                        <th>Code</th>
+                        <th>Type of Emotion</th>
                     </thead>
                     <tbody>
                         <tr>
