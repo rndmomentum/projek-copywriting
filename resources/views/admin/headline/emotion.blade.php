@@ -40,6 +40,7 @@
                         <th>#</th>
                         <th>Code</th>
                         <th>Type of Emotion</th>
+                        <th>Created At</th>
                     </thead>
                     <tbody>
                         <tr>
@@ -51,6 +52,7 @@
                             <td>2</td>
                             <td>e1</td>
                             <td>Need of Variety</td>
+                            <td>2020-01-19 12:09:14</td>
                         </tr>
                     </tbody>
                 </table>
