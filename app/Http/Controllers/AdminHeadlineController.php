@@ -29,4 +29,14 @@ class AdminHeadlineController extends Controller
     {
         return view('admin.headline.emotion');
     }
+
+    /**
+     * Add business
+     * 
+     * 
+     */
+    public function add_business()
+    {
+        return view('admin.headline.business');
+    }
 }

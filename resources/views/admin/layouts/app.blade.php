@@ -94,7 +94,6 @@
 							<div id="subPages" class="collapse ">
 								<ul class="nav">
 									<li><a href="{{ url('admin/headline/create') }}"><i class="fas fa-arrow-right"></i> Create Headline</a></li>
-									<li><a href="{{ url('admin/headline/keywords') }}"><i class="fas fa-arrow-right"></i> Keywords</a></li>
 									<li><a href="{{ url('admin/headline/business') }}"><i class="fas fa-arrow-right"></i> Business</a></li>
 									<li><a href="{{ url('admin/headline/emotion') }}"><i class="fas fa-arrow-right"></i> Emotion</a></li>
 								</ul>
