@@ -49,14 +49,14 @@
                             <td>e0</td>
                             <td>Need of Guarantee</td>
                             <td>2020-01-19 12:09:14</td>
-                            <button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                            <td><button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
                         </tr>
                         <tr>
                             <td>2</td>
                             <td>e1</td>
                             <td>Need of Variety</td>
                             <td>2020-01-19 12:09:14</td>
-                            <button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                            <td><button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
                         </tr>
                     </tbody>
                 </table>
