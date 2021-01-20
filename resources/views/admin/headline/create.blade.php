@@ -21,6 +21,11 @@
                     <textarea class="form-control" name="headline" rows="3" placeholder="Your headline here"></textarea>
                 </div>
             </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="keyword" placeholder="Keyword Here" required>
+                </div>
+            </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <select class="form-control" name="emotion" required>
