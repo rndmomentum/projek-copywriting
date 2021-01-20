@@ -9,6 +9,10 @@
 @endsection
 
 @section('content')
+<div class="alert alert-warning alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong>Warning!</strong> Better check yourself, you're not looking too good.
+</div>
 <div class="panel panel-headline">
     <div class="panel-heading">
         <h3 class="panel-title">Add Emotion</h3>
@@ -16,14 +20,17 @@
     </div>
     <div class="panel-body">
         <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <input type="text" class="form-control" name="emotion" placeholder="Your text here" required>
+            <form action="{{ url('admin/headline/emotion/store') }}" method="POST">
+                @csrf
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="emotion" placeholder="Your text here" required>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-12">
-                <button type="submit" class="btn btn-primary pull-right">Submit</button>
-            </div>
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -43,18 +50,14 @@
                         <th>Action</th>
                     </thead>
                     <tbody>
+                        @foreach($emotion as $e)
                         <tr>
-                            <td>e0</td>
-                            <td>Need of Guarantee</td>
-                            <td>2020-01-19 12:09:14</td>
+                            <td>{{ $e->emotion_id }}</td>
+                            <td>{{ $e->emotion_text }}</td>
+                            <td>{{ $e->created_at }}</td>
                             <td><button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button></td>
                         </tr>
-                        <tr>
-                            <td>e1</td>
-                            <td>Need of Variety</td>
-                            <td>2020-01-19 12:09:14</td>
-                            <td><button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button></td>
-                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

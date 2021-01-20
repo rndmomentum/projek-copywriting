@@ -48,4 +48,7 @@ Route::get('admin/headline/create', 'AdminHeadlineController@create_headline');
 Route::get('admin/headline/emotion', 'AdminHeadlineController@add_emotion');
 Route::get('admin/headline/business', 'AdminHeadlineController@add_business');
 
+// Store
+Route::post('admin/headline/emotion/store', 'AdminHeadlineController@store_emotion');
+
 #################### Admin Headline Controller ####################

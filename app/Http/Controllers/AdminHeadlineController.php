@@ -27,7 +27,9 @@ class AdminHeadlineController extends Controller
      */
     public function add_emotion()
     {
-        return view('admin.headline.emotion');
+        $emotion = Emotion::orderBy('id', 'Desc')->get();
+
+        return view('admin.headline.emotion', compact('emotion'));
     }
 
     /**
@@ -38,5 +40,22 @@ class AdminHeadlineController extends Controller
     public function add_business()
     {
         return view('admin.headline.business');
+    }
+
+    /**
+     * Store emotion
+     * 
+     * 
+     */
+    public function store_emotion(Request $request)
+    {   
+        $emotion_id = 'e1';
+
+        Emotion::create([
+            'emotion_id' => $emotion_id,
+            'emotion_text' => $request->emotion,
+        ]);
+
+        return redirect()->back()->with('success', 'Done update!');
     }
 }
