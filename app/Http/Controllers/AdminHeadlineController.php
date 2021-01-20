@@ -39,7 +39,9 @@ class AdminHeadlineController extends Controller
      */
     public function add_business()
     {
-        return view('admin.headline.business');
+        $business = Business::orderBy('id', 'Asc')->get();
+
+        return view('admin.headline.business', compact('business'));
     }
 
     /**

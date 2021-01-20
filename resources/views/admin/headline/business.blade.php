@@ -46,24 +46,14 @@
                         <th>Action</th>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>b0</td>
-                            <td>Service</td>
-                            <td>2020-01-19 12:09:14</td>
-                            <td><button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>b1</td>
-                            <td>Beauty</td>
-                            <td>2020-01-19 12:09:14</td>
-                            <td><button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button></td>
-                        </tr>
-                        <tr>
-                            <td>b2</td>
-                            <td>Food & Beverages</td>
-                            <td>2020-01-19 12:09:14</td>
-                            <td><button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button></td>
-                        </tr>
+                        @foreach($business as $b)
+                            <tr>
+                                <td>{{ $b->business_id }}</td>
+                                <td>{{ $b->business_type }}</td>
+                                <td>{{ $b->created_at }}</td>
+                                <td><button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button></td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
