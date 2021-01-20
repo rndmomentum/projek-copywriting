@@ -49,7 +49,11 @@ class AdminHeadlineController extends Controller
      */
     public function store_emotion(Request $request)
     {   
-        $emotion_id = 'e1';
+        $get_emotion = Emotion::orderBy('id', 'Desc')->first();
+        $total = $get_emotion->id + 1;
+
+        $emotion_id = 'e' . $total;
+        //$emotion_id = 'e1';
 
         Emotion::create([
             'emotion_id' => $emotion_id,
