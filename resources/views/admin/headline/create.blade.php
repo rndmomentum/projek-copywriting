@@ -53,7 +53,7 @@
                     </select>
                 </div>
             </div>
-            <div class="col-md-12 mt-4">
+            <div class="col-md-12">
                 <button type="submit" class="btn btn-primary pull-right">Submit</button>
             </div>
         </div>
