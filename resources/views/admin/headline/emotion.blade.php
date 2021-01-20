@@ -27,6 +27,37 @@
         </div>
     </div>
 </div>
+
+<div class="panel panel-headline">
+    <div class="panel-heading">
+        <h3 class="panel-title">List Emotion</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>#</tr>
+                        <tr>Code</tr>
+                        <tr>Type of Emotion</tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>e0</td>
+                            <td>Need of Guarantee</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>e1</td>
+                            <td>Need of Variety</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
 
 @section('js')
