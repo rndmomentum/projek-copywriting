@@ -109,6 +109,7 @@ class AdminHeadlineController extends Controller
         $total = $get_keyword->id + 1;
 
         //$keyword_id = 'k1';
+        $keyword_id = 'k' . $total;
 
         Keywords::create([
             'keyword_id' => $keyword_id,
