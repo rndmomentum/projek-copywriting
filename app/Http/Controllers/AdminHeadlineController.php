@@ -16,8 +16,12 @@ class AdminHeadlineController extends Controller
      * 
      */
     public function create_headline()
-    {
-        return view('admin.headline.create');
+    {   
+        $keywords = Keywords::all('keyword_text');
+
+        //return view('admin.headline.create', compact('keywords'));
+
+        dd($keywords);
     }
 
     /**
