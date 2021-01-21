@@ -21,7 +21,7 @@ class AdminHeadlineController extends Controller
 
         //return view('admin.headline.create', compact('keywords'));
 
-        dd($keywords);
+        echo $keywords;
     }
 
     /**
