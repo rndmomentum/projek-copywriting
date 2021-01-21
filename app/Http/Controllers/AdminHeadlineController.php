@@ -97,4 +97,24 @@ class AdminHeadlineController extends Controller
 
         return redirect()->back()->with('success', 'Done update!');
     }
+
+    /**
+     * 
+     * 
+     * 
+     */
+    public function store_keywords(Reqesut $request)
+    {   
+        // $get_keyword = Keywords::orderBy('id', 'Desc')->first();
+        // $total = $get_keyword->id + 1;
+
+        $keyword_id = 'k1';
+
+        Keywords::create([
+            'keyword_id' => $keyword_id,
+            'keyword_text' => $request->keyword
+        ]);
+
+        return redirect()->back()->with('success', 'Done update!');
+    }
 }

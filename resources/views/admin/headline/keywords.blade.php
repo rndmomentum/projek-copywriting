@@ -22,11 +22,11 @@
     </div>
     <div class="panel-body">
         <div class="row">
-            <form action="{{ url('admin/headline/emotion/store') }}" method="POST">
+            <form action="{{ url('admin/headline/keyword/store') }}" method="POST">
                 @csrf
                 <div class="col-md-12">
                     <div class="form-group">
-                        <input type="text" class="form-control" name="emotion" placeholder="Your text here" required>
+                        <input type="text" class="form-control" name="keyword" placeholder="Your text here" required>
                     </div>
                 </div>
                 <div class="col-md-12">

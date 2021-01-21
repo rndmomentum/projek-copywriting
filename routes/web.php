@@ -52,5 +52,6 @@ Route::get('admin/headline/keywords', 'AdminHeadlineController@add_keywords');
 // Store
 Route::post('admin/headline/emotion/store', 'AdminHeadlineController@store_emotion');
 Route::post('admin/headline/business/store', 'AdminHeadlineController@store_business');
+Route::post('admin/headline/keyword/store', 'AdminHeadlineController@store_keywords');
 
 #################### Admin Headline Controller ####################
