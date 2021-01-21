@@ -105,10 +105,10 @@ class AdminHeadlineController extends Controller
      */
     public function store_keywords(Request $request)
     {   
-        // $get_keyword = Keywords::orderBy('id', 'Desc')->first();
-        // $total = $get_keyword->id + 1;
+        $get_keyword = Keywords::orderBy('id', 'Desc')->first();
+        $total = $get_keyword->id + 1;
 
-        $keyword_id = 'k1';
+        //$keyword_id = 'k1';
 
         Keywords::create([
             'keyword_id' => $keyword_id,
