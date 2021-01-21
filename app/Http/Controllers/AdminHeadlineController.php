@@ -103,7 +103,7 @@ class AdminHeadlineController extends Controller
      * 
      * 
      */
-    public function store_keywords(Reqesut $request)
+    public function store_keywords(Request $request)
     {   
         // $get_keyword = Keywords::orderBy('id', 'Desc')->first();
         // $total = $get_keyword->id + 1;
