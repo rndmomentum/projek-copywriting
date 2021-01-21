@@ -52,11 +52,11 @@
                         <th>Action</th>
                     </thead>
                     <tbody>
-                        @foreach($emotion as $e)
+                        @foreach($keywords as $k)
                         <tr>
-                            <td>{{ $e->emotion_id }}</td>
-                            <td>{{ $e->emotion_text }}</td>
-                            <td>{{ $e->created_at }}</td>
+                            <td>{{ $k->keyword_id }}</td>
+                            <td>{{ $k->keyword_text }}</td>
+                            <td>{{ $k->created_at }}</td>
                             <td><button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button></td>
                         </tr>
                         @endforeach

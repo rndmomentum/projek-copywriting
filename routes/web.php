@@ -47,6 +47,7 @@ Route::post('admin/check-login', 'AdminController@checklogin');
 Route::get('admin/headline/create', 'AdminHeadlineController@create_headline');
 Route::get('admin/headline/emotion', 'AdminHeadlineController@add_emotion');
 Route::get('admin/headline/business', 'AdminHeadlineController@add_business');
+Route::get('admin/headline/keywords', 'AdminHeadlineController@add_keywords');
 
 // Store
 Route::post('admin/headline/emotion/store', 'AdminHeadlineController@store_emotion');

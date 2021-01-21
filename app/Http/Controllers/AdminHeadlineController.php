@@ -45,6 +45,18 @@ class AdminHeadlineController extends Controller
     }
 
     /**
+     * Add keywords
+     * 
+     * 
+     */
+    public function add_keywords()
+    {   
+        $keywords = Keywords::orderBy('id', 'Asc')->get();
+
+        return view('admin.headline.keywords', compact('keywords'));
+    }
+
+    /**
      * Store emotion
      * 
      * 
