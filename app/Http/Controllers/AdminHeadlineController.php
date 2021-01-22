@@ -7,6 +7,7 @@ use App\Models\Business;
 use App\Models\Emotion;
 use App\Models\Keywords;
 use App\Models\Headline;
+use Illuminate\Support\Collection;
 
 class AdminHeadlineController extends Controller
 {
