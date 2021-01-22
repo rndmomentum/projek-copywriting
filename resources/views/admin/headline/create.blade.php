@@ -119,7 +119,8 @@
 <script>
 $(function() {
 
-    var availableTags = "[{{ $keywords->implode('keyword_text', ', ') }}]";
+    //var availableTags = "[{{ $keywords->implode('keyword_text', ', ') }}]";
+    var availableTags = ["manis", "idea"];
 
     document.getElementById("demo").innerHTML = availableTags;
     
