@@ -21,7 +21,9 @@ class AdminHeadlineController extends Controller
 
         $test = array($keywords);
 
-        echo array_values($test);
+        //echo array_values($test);
+
+        echo $test;
 
         //return view('admin.headline.create', compact('keywords'));
     }
