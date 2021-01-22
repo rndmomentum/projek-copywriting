@@ -21,7 +21,7 @@ class AdminHeadlineController extends Controller
 
         //echo $keywords->id;
 
-        $arrs = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+        $arrs = array($keywords);
         $array = (array_values($arrs)); 
 
         echo "<pre>";
