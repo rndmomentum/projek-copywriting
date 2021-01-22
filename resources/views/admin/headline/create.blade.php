@@ -129,7 +129,7 @@ $(document).ready(function() {
     //     source: availableTags
     // });
 
-    var fruits = ["apple", "orange", "cherry"];
+    var fruits = "{{ $keywords }}";
     fruits.forEach(myFunction);
 
     function myFunction(item, index) 
