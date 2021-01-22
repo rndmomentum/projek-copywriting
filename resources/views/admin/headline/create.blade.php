@@ -117,19 +117,26 @@
 
 @section('js')
 <script>
-$(function() {
+
+$(document).ready(function() {
 
     //var availableTags = "[{{ $keywords->implode('keyword_text', ', ') }}]";
-    var availableTags = ["manis", "idea"];
+    // var availableTags = ["manis", "idea"];
 
-    document.getElementById("demo").innerHTML = availableTags;
+    // document.getElementById("demo").innerHTML = availableTags;
     
-    $("#tags").autocomplete({
-        source: availableTags
-    });
+    // $("#tags").autocomplete({
+    //     source: availableTags
+    // });
+
+    var fruits = ["apple", "orange", "cherry"];
+    fruits.forEach(myFunction);
+
+    function myFunction(item, index) {
+    document.getElementById("demo").innerHTML += index + ":" + item + "<br>"; 
+    }
     
 });
-
 
 </script>
 @endsection
