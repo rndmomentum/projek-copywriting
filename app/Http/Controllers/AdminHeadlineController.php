@@ -109,7 +109,7 @@ class AdminHeadlineController extends Controller
      */
     public function store_keywords(Request $request)
     {   
-        if(!Keywords::all()->exists())
+        if(Keywords::orderBy('id','By')->isEmpty())
         {
 
             $keyword_id = 'k1';
