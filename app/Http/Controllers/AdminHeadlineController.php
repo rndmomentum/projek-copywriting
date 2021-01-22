@@ -19,7 +19,7 @@ class AdminHeadlineController extends Controller
     {   
         $keywords = Keywords::all('keyword_text');
 
-        echo array_values($keywords);
+        print_r(json_encode(array_values($keywords)));
 
         //return view('admin.headline.create', compact('keywords'));
     }
