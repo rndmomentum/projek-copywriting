@@ -115,34 +115,22 @@
 
 @section('js')
 <script>
-$(function() {
-  var availableTags = [
-    "ActionScript",
-    "AppleScript",
-    "Asp",
-    "BASIC",
-    "C",
-    "C++",
-    "Clojure",
-    "COBOL",
-    "ColdFusion",
-    "Erlang",
-    "Fortran",
-    "Groovy",
-    "Haskell",
-    "Java",
-    "JavaScript",
-    "Lisp",
-    "Perl",
-    "PHP",
-    "Python",
-    "Ruby",
-    "Scala",
-    "Scheme"
-  ];
-  $("#tags").autocomplete({
-    source: availableTags
-  });
+$(document).ready(function() {
+
+    var data = [];
+
+    @foreach($keywords as $keyword)
+
+        data.push({ id: '{{ $keyword->keyword_id }}', text: '{{ $keyword->keyword_text }}' });
+        
+    @endforeach
+
+    $("#tags").autocomplete({
+
+        source: data
+
+    });
+
 });
 
 
