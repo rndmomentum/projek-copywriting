@@ -17,14 +17,12 @@ class AdminHeadlineController extends Controller
      */
     public function create_headline()
     {   
-        $keywords = Keywords::all('keyword_text');
+        $keywords = Keywords::all('keyword_text','id');
 
-        $test = array($keywords);
+        echo $keywords;
 
-        //echo array_values($test);
-
-        $arr = array("Peter"=>"35", "Peter"=>"37", "Peter"=>"43");
-        print_r(json_encode(array_values($arr)));
+        // $arr = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+        // print_r(json_encode(array_values($arr)));
 
         //return view('admin.headline.create', compact('keywords'));
     }
