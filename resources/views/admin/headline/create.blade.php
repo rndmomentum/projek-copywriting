@@ -122,6 +122,8 @@ $(document).ready(function() {
     @foreach($keywords as $keyword)
 
         data.push({ id: '{{ $keyword->keyword_id }}', text: '{{ $keyword->keyword_text }}' });
+
+        console.log(data);
         
     @endforeach
 
