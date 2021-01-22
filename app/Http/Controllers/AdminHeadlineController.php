@@ -21,9 +21,11 @@ class AdminHeadlineController extends Controller
 
         //echo $keywords->id;
 
-        //$arr = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
-        $arr = array($keywords);
-        print_r(json_encode(array_values($arr)));
+        $arrs = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+        $array = (array_values($arrs)); 
+
+        echo "<pre>";
+        print_r($array);
 
         //return view('admin.headline.create', compact('keywords'));
     }
