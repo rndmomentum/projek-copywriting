@@ -19,7 +19,7 @@ class AdminHeadlineController extends Controller
     {   
         $keywords = Keywords::all('keyword_text','id');
 
-        echo $keywords;
+        echo $keywords->id;
 
         // $arr = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
         // print_r(json_encode(array_values($arr)));
