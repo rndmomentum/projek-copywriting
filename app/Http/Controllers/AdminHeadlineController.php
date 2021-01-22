@@ -109,16 +109,31 @@ class AdminHeadlineController extends Controller
      */
     public function store_keywords(Request $request)
     {   
-        $get_keyword = Keywords::orderBy('id', 'Desc')->first();
-        $total = $get_keyword->id + 1;
+        if(Keywords::orderBy('id', 'Desc')->first() == isEmpty())
+        {
 
-        //$keyword_id = 'k1';
-        $keyword_id = 'k' . $total;
+            $keyword_id = 'k1';
 
-        Keywords::create([
-            'keyword_id' => $keyword_id,
-            'keyword_text' => $request->keyword
-        ]);
+            Keywords::create([
+                'keyword_id' => $keyword_id,
+                'keyword_text' => $request->keyword
+            ]);
+
+        }else{
+
+            $get_keyword = Keywords::orderBy('id', 'Desc')->first();
+            $total = $get_keyword->id + 1;
+
+            //$keyword_id = 'k1';
+            $keyword_id = 'k' . $total;
+
+            Keywords::create([
+                'keyword_id' => $keyword_id,
+                'keyword_text' => $request->keyword
+            ]);
+
+        }
+        
 
         return redirect()->back()->with('success', 'Done update!');
     }
