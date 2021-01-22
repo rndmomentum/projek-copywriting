@@ -24,7 +24,7 @@ class AdminHeadlineController extends Controller
         $arrs = array($keywords);
         $array = (array_values($arrs)); 
 
-        echo "<pre>";
+        //echo "<pre>";
         print_r($array);
 
         //return view('admin.headline.create', compact('keywords'));
