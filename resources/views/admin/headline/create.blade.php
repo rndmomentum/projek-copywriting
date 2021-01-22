@@ -108,6 +108,10 @@
             <div class="col-md-12">
                 <button type="submit" class="btn btn-primary pull-right">Submit</button>
             </div>
+
+            <div class="col-md-12">
+                <p class="demo"></p>
+            </div>
         </div>
     </div>
 </div>
@@ -117,9 +121,8 @@
 
 @section('js')
 <script>
-$(function() {
 
-    var availableTags = [
+var availableTags = [
         "ActionScript",
         "AppleScript",
         "Asp",
@@ -145,13 +148,6 @@ $(function() {
     ];
 
     document.getElementById("demo").innerHTML = availableTags;
-    
-    // $("#tags").autocomplete({
-    //     source: availableTags
-    // });
-    
-});
-
 
 </script>
 @endsection
