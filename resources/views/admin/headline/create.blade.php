@@ -111,8 +111,6 @@
         </div>
     </div>
 </div>
-
-<p id="demo"></p>
 @endsection
 
 @section('js')
@@ -121,11 +119,11 @@ $(function() {
 
     var availableTags = ["{{ $keywords->implode('keyword_text', ', ') }}"];
 
-    document.getElementById("demo").innerHTML = availableTags;
+    //document.getElementById("demo").innerHTML = availableTags;
     
-    // $("#tags").autocomplete({
-    //     source: availableTags
-    // });
+    $("#tags").autocomplete({
+        source: availableTags
+    });
     
 });
 
