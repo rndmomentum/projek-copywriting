@@ -20,7 +20,9 @@ class AdminHeadlineController extends Controller
         $keywords = Keywords::all('keyword_text');
 
         $test = array($keywords);
-        echo array_values($test);
+
+        echo $keywords->implode('keyword_text', ', ');
+        //echo array_values($test);
 
         //return view('admin.headline.create', compact('keywords'));
     }
