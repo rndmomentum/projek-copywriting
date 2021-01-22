@@ -132,8 +132,9 @@ $(document).ready(function() {
     var fruits = ["apple", "orange", "cherry"];
     fruits.forEach(myFunction);
 
-    function myFunction(item, index) {
-    document.getElementById("demo").innerHTML += index + ":" + item + "<br>"; 
+    function myFunction(item, index) 
+    {
+        document.getElementById("demo").innerHTML += index + ":" + item + "<br>"; 
     }
     
 });
