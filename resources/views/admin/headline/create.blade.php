@@ -111,28 +111,45 @@
         </div>
     </div>
 </div>
+
+<p class="demo"></p>
 @endsection
 
 @section('js')
 <script>
-$(document).ready(function() {
+$(function() {
 
-    var data = [];
+    var availableTags = [
+        "ActionScript",
+        "AppleScript",
+        "Asp",
+        "BASIC",
+        "C",
+        "C++",
+        "Clojure",
+        "COBOL",
+        "ColdFusion",
+        "Erlang",
+        "Fortran",
+        "Groovy",
+        "Haskell",
+        "Java",
+        "JavaScript",
+        "Lisp",
+        "Perl",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Scala",
+        "Scheme"
+    ];
 
-    @foreach($keywords as $keyword)
-
-        data.push({ id: '{{ $keyword->keyword_id }}', text: '{{ $keyword->keyword_text }}' });
-
-        console.log(data);
-        
-    @endforeach
-
-    $("#tags").autocomplete({
-
-        source: data
-
-    });
-
+    document.getElementById("demo").innerHTML = availableTags;
+    
+    // $("#tags").autocomplete({
+    //     source: availableTags
+    // });
+    
 });
 
 
