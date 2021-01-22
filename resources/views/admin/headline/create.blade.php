@@ -123,9 +123,9 @@ $(function() {
 
     document.getElementById("demo").innerHTML = availableTags;
     
-    // $("#tags").autocomplete({
-    //     source: availableTags
-    // });
+    $("#tags").autocomplete({
+        source: availableTags
+    });
     
 });
 
