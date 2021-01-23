@@ -14,7 +14,10 @@ class Headline extends Model
     protected $fillable = [
 
         'headline_id',
-        'headline_text'
+        'headline_text',
+        'keyword',
+        'business_id',
+        'emotion_id'
         
     ];
 }
