@@ -75,7 +75,14 @@
             </div>
             <div class="col-md-12">
                 <div class="form-group">
-                    <input type="text" class="form-control" name="keyword" id="tags" placeholder="Keyword Here" required>
+                    <input type="text" class="form-control" name="keyword" id="keywords" placeholder="Keyword Here" required>
+                    <datalist id="keywords">
+                        <option value="Edge">
+                        <option value="Firefox">
+                        <option value="Chrome">
+                        <option value="Opera">
+                        <option value="Safari">
+                    </datalist>
                 </div>
             </div>
             <div class="col-md-6">
@@ -111,33 +118,8 @@
         </div>
     </div>
 </div>
-
-<p id="demo"></p>
 @endsection
 
 @section('js')
-<script>
 
-$(document).ready(function() {
-
-    //var availableTags = "[{{ $keywords->implode('keyword_text', ', ') }}]";
-    // var availableTags = ["manis", "idea"];
-
-    // document.getElementById("demo").innerHTML = availableTags;
-    
-    // $("#tags").autocomplete({
-    //     source: availableTags
-    // });
-
-    var fruits = "{{ $keywords }}";
-    fruits.forEach(myFunction);
-
-    function myFunction(item, index) 
-    {
-        document.getElementById("demo").innerHTML += index + ":" + item + "<br>"; 
-    }
-    
-});
-
-</script>
 @endsection
