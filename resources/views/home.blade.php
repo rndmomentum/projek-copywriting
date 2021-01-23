@@ -25,14 +25,9 @@
                             <i class="fas fa-check"></i> New Keyword
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Jaminan pulangan wang</li>
-                            <li class="list-group-item">Berhasil 100%</li>
-                            <li class="list-group-item">Dijamin halal</li>
-                            <li class="list-group-item">Barang boleh tukar</li>
-                            <li class="list-group-item">Tiada bahan pengawet</li>
-                            <li class="list-group-item">Boleh ganti baru</li>
-                            <li class="list-group-item">Pasti berhasil</li>
-                            <li class="list-group-item">Selamat digunakan</li>
+                            @foreach($keywords as $keyword)
+                                <li class="list-group-item">{{ $keyword->keyword_text }}</li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>

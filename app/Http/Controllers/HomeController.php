@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Headline;
+use App\Models\Keywords;
+use App\Models\Business;
+use App\Models\Emotion;
+
 class HomeController extends Controller
 {
     /**
@@ -23,8 +28,10 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    {
-        return view('home');
+    {   
+        $keywords = Keywords::orderBy('id','Desc')->limit(7);
+
+        return view('home', compact('keywords'));
     }
 
 }
