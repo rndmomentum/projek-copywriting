@@ -59,6 +59,26 @@ class AdminHeadlineController extends Controller
     }
 
     /**
+     *  Add headline 
+     * 
+     *
+     */
+    public function store_headline(Request $request)
+    {   
+        $headline_id = 'h1';
+
+        Headline::create([
+            'headline_id' => $headline_id,
+            'headline_text' => $request->headline,
+            'keyword' => $request->keywords,
+            'emotion_id' => $request->emotion,
+            'business_id' => $request->business
+        ]);
+
+        return redirect()->back()->with('success', 'Done update!');
+    }
+
+    /**
      * Store emotion
      * 
      * 
