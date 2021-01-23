@@ -24,8 +24,10 @@ class HeadlineController extends Controller
 
     // List headline
     public function list_headline($business,$emotion,$keyword)
-    {
-        return view('headline.list', compact('business'));
+    {   
+        $headline = Headline::where('business_id', $business)->where('emotion_id', $emotion)->where('keyword', $keyword)->get();
+
+        return view('headline.list', compact('business', 'headline'));
     }
 
     // Find Now

@@ -16,8 +16,8 @@
             <hr>
         </div>
     </div>
-    @foreach($headline as $keyword)
-        <div class="row">
+    <div class="row">
+        @foreach($headline as $keyword)
             <div class="col-md-3">
                 <a href="{{ url('headline') }}/{{ $business }}/{{ $emotion }}/{{ $keyword->keyword }}" class="text-decoration-none">
                     <div class="card shadow">
@@ -27,8 +27,8 @@
                     </div>
                 </a>
             </div>
-        </div>
-    @endforeach
+        @endforeach
+    </div>
 </div>
 @endsection
 

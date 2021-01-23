@@ -90,50 +90,42 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6">
-                            <a href="#" data-toggle="modal" data-target="#contoh1" class="text-decoration-none">
-                                <div class="card shadow">
-                                    <div class="card-body bg-primary text-light py-4 px-4">
-                                        <p class="d-inline-block text-truncate" style="max-width: 250px;">"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"</p>
+                        @foreach($headline as $h)
+                            <div class="col-md-6">
+                                <a href="#" data-toggle="modal" data-target="#{{ $h->headline_id }}" class="text-decoration-none">
+                                    <div class="card shadow">
+                                        <div class="card-body bg-primary text-light py-4 px-4">
+                                            <p class="d-inline-block text-truncate" style="max-width: 250px;">{{ $h->headline_text }}</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Contoh 1 -->
+                            <div class="modal fade" id="{{ $h->headline_id }}" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title">Display</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>{{ $h->headline_text }}</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="#" data-toggle="modal" data-target="#contoh1" class="text-decoration-none">
-                                <div class="card shadow">
-                                    <div class="card-body bg-primary text-light py-4 px-4">
-                                        <p class="d-inline-block text-truncate" style="max-width: 250px;">"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Contoh 1 -->
-    <div class="modal fade" id="contoh1" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title"># Example 1</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"</p>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
+</div>
 @endsection
 
 @section('js')
