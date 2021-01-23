@@ -5,62 +5,16 @@
 @endsection
 
 @section('css')
-<style>
-.ui-autocomplete {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
-  display: none;
-  float: left;
-  min-width: 160px;
-  padding: 5px 0;
-  margin: 2px 0 0;
-  list-style: none;
-  font-size: 14px;
-  text-align: left;
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  background-clip: padding-box;
-}
 
-.ui-autocomplete > li > div {
-  display: block;
-  padding: 3px 20px;
-  clear: both;
-  font-weight: normal;
-  line-height: 1.42857143;
-  color: #333333;
-  white-space: nowrap;
-}
-
-.ui-state-hover,
-.ui-state-active,
-.ui-state-focus {
-  text-decoration: none;
-  color: #262626;
-  background-color: #f5f5f5;
-  cursor: pointer;
-}
-
-.ui-helper-hidden-accessible {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-</style>
 @endsection
 
 @section('content')
+@if(session('success'))
+    <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        {{ session('success') }}
+    </div>
+@endif
 <div class="panel panel-headline">
     <div class="panel-heading">
         <h3 class="panel-title">Create New Headline</h3>
@@ -117,6 +71,38 @@
                 </div>
             </div>
         </form>
+    </div>
+</div>
+
+<div class="panel panel-headline">
+    <div class="panel-heading">
+        <h3 class="panel-title">List Headline</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-hover">
+                    <thead>
+                        <th>#</th>
+                        <th>Headline</th>
+                        <th>Keyword</th>
+                        <th>Created At</th>
+                        <th>Action</th>
+                    </thead>
+                    <tbody>
+                        @foreach($headline as $h)
+                            <tr>
+                                <td>{{ $h->headline_id }}</td>
+                                <td>{{ $h->headline_text }}</td>
+                                <td>{{ $h->keyword }}</td>
+                                <td>{{ $h->created_at }}</td>
+                                <td><button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button></td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </div>
 @endsection
