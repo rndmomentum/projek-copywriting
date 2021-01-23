@@ -22,7 +22,7 @@
                 <a href="{{ url('headline') }}/{{ $business }}/{{ $emotion }}/{{ $keyword->keyword }}" class="text-decoration-none">
                     <div class="card shadow">
                         <div class="card-body bg-primary text-light py-4 px-4">
-                            <h6 class="card-title"><b>{{ $keyword->keyword_text }}</b></h6>
+                            <h6 class="card-title"><b>{{ $keyword->keyword }}</b></h6>
                         </div>
                     </div>
                 </a>
