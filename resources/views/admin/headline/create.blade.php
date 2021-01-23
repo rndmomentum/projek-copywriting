@@ -77,11 +77,9 @@
                 <div class="form-group">
                 <input list="keywords" class="form-control" name="keywords" placeholder="Keyword Here" required>
                 <datalist id="keywords">
-                    <option value="Edge">
-                    <option value="Firefox">
-                    <option value="Chrome">
-                    <option value="Opera">
-                    <option value="Safari">
+                    @foreach($keywords as $keyword)
+                        <option value="{{ $keyword->keyword_id }}">{{ $keyword->keyword_text }}</option>
+                    @endforeach
                 </datalist>
                 </div>
             </div>
