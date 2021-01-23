@@ -43,14 +43,9 @@
                     <div class="form-group">
                         <select class="form-control" name="emotion" required>
                             <option value="">-- Choose Emotion --</option>
-                            <option value="e0">Need of Guarantee</option>
-                            <option value="e1">Need of Variety</option>
-                            <option value="e2">Need of Excellent</option>
-                            <option value="e3">Need of Recognition</option>
-                            <option value="e4">Need of Achievement</option>
-                            <option value="e5">Need of Love</option>
-                            <option value="e6">Need of Growth</option>
-                            <option value="e7">Need of Contribution</option>
+                            @foreach($emotion as $e)
+                                <option value="{{ $e->emotion_id }}">{{ $e->emotion_text }}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
@@ -58,11 +53,9 @@
                     <div class="form-group">
                         <select class="form-control" name="business" required>
                             <option value="">-- Type of Business --</option>
-                            <option value="beauty">Beauty</option>
-                            <option value="fashion">Fashion</option>
-                            <option value="healthy">Healthy</option>
-                            <option value="foodnbeverages">Food & Beverages</option>
-                            <option value="service">Service</option>
+                            @foreach($business as $b)
+                                <option value="{{ $b->business_id }}">{{ $b->business_type }}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
