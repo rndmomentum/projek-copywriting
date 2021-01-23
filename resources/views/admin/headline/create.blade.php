@@ -78,7 +78,7 @@
                 <input list="keywords" class="form-control" name="keywords" placeholder="Keyword Here" required>
                 <datalist id="keywords">
                     @foreach($keywords as $keyword)
-                        <option value="{{ $keyword->keyword_id }}">{{ $keyword->keyword_text }}</option>
+                        <option value="{{ $keyword->keyword_text }}">
                     @endforeach
                 </datalist>
                 </div>
