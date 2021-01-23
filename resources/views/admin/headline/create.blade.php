@@ -75,14 +75,14 @@
             </div>
             <div class="col-md-12">
                 <div class="form-group">
-  <input list="browsers" class="form-control" name="browser" id="browser">
-  <datalist id="browsers">
-    <option value="Edge">
-    <option value="Firefox">
-    <option value="Chrome">
-    <option value="Opera">
-    <option value="Safari">
-  </datalist>
+                <input list="keyword" class="form-control" name="keyword" placeholder="Keyword Here" id="keyword" required>
+                <datalist id="keyword">
+                    <option value="Edge">
+                    <option value="Firefox">
+                    <option value="Chrome">
+                    <option value="Opera">
+                    <option value="Safari">
+                </datalist>
                 </div>
             </div>
             <div class="col-md-6">
