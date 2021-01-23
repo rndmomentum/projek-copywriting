@@ -66,7 +66,11 @@ class AdminHeadlineController extends Controller
      */
     public function store_headline(Request $request)
     {   
-        $headline_id = 'h1';
+        $get_headline = Headline::orderBy('id','Desc')->first();
+        $total = $get_headline->id + 1;
+
+        $headline_id = 'h' . $total;
+        //$headline_id = 'h1';
 
         Headline::create([
             'headline_id' => $headline_id,
