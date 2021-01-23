@@ -79,7 +79,7 @@
                                 <select class="form-control" name="business" required>
                                     <option value="">-- Type of Business --</option>
                                     @foreach($business as $b)
-                                        <option value="{{ $b->business_id }}">{{ $b->type_business }}</option>
+                                        <option value="{{ $b->business_id }}">{{ $b->business_type }}</option>
                                     @endforeach
                                 </select>
                             </div>
