@@ -18,7 +18,7 @@ class AdminHeadlineController extends Controller
     public function create_headline()
     {   
         $keywords = Keywords::all(['keyword_id', 'keyword_text']);
-        $headline = Headline::orderBy('id', 'Desc')->get();
+        $headline = Headline::orderBy('id', 'Desc')->paginate(7);
         $business = Business::all(['business_id', 'business_type']);
         $emotion = Emotion::all(['emotion_id', 'emotion_text']);
 

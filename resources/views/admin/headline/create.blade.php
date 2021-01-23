@@ -76,7 +76,6 @@
             <div class="col-md-12">
                 <table class="table table-hover">
                     <thead>
-                        <th>#</th>
                         <th>Headline</th>
                         <th>Keyword</th>
                         <th>Created At</th>
@@ -85,7 +84,6 @@
                     <tbody>
                         @foreach($headline as $h)
                             <tr>
-                                <td>{{ $h->headline_id }}</td>
                                 <td>{{ $h->headline_text }}</td>
                                 <td>{{ $h->keyword }}</td>
                                 <td>{{ $h->created_at }}</td>
