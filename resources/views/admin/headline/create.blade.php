@@ -75,8 +75,8 @@
             </div>
             <div class="col-md-12">
                 <div class="form-group">
-                <input list="browsers" class="form-control" name="browser" placeholder="Keyword Here" id="browser" required>
-                <datalist id="browsers">
+                <input list="keywords" class="form-control" name="keywords" placeholder="Keyword Here" required>
+                <datalist id="keywords">
                     <option value="Edge">
                     <option value="Firefox">
                     <option value="Chrome">
