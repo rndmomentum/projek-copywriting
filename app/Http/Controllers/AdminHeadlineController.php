@@ -17,10 +17,10 @@ class AdminHeadlineController extends Controller
      */
     public function create_headline()
     {   
-        $keywords = Keywords::all();
+        $keywords = Keywords::all(['keyword_id', 'keyword_text']);
         $headline = Headline::orderBy('id', 'Desc')->get();
-        $business = Business::all();
-        $emotion = Emotion::all();
+        $business = Business::all(['business_id', 'business_type']);
+        $emotion = Emotion::all(['emotion_id', 'emotion_text']);
 
         return view('admin.headline.create', compact('keywords', 'headline', 'business', 'emotion'));
     }
