@@ -29,7 +29,7 @@ class HomeController extends Controller
      */
     public function index()
     {   
-        $keywords = Keywords::orderBy('id','Desc')->limit(7);
+        $keywords = Keywords::orderBy('id','Desc')->paginate(7);
 
         return view('home', compact('keywords'));
     }
