@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Keywords;
+use App\Models\Headline;
 
 class HeadlineController extends Controller
 {   
@@ -14,8 +16,10 @@ class HeadlineController extends Controller
     
     // Choose Keyword
     public function keyword_page($business,$emotion)
-    {
-        return view('headline.keyword', compact('business','emotion'));
+    {   
+        $headline = Headline::where('business_id', $business)->where('emotion_id', $emotion)->get();
+
+        return view('headline.keyword', compact('business','emotion','headline'));
     }
 
     // List headline

@@ -16,83 +16,19 @@
             <hr>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-3">
-            <a href="{{ url('headline') }}/{{ $business }}/{{ $emotion }}/jaminan-pulangan-wang" class="text-decoration-none">
-                <div class="card shadow">
-                    <div class="card-body bg-primary text-light py-4 px-4">
-                        <h6 class="card-title"><b>Jaminan pulangan wang</b></h6>
+    @foreach($headline as $keyword)
+        <div class="row">
+            <div class="col-md-3">
+                <a href="{{ url('headline') }}/{{ $business }}/{{ $emotion }}/{{ $keyword->keyword }}" class="text-decoration-none">
+                    <div class="card shadow">
+                        <div class="card-body bg-primary text-light py-4 px-4">
+                            <h6 class="card-title"><b>{{ $keyword->keyword_text }}</b></h6>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
-        <div class="col-md-3">
-            <a href="#" class="text-decoration-none">
-                <div class="card shadow">
-                    <div class="card-body bg-primary text-light py-4 px-4">
-                        <h6 class="card-title"><b>Berhasil 100%</b></h6>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3">
-            <a href="#" class="text-decoration-none">
-                <div class="card shadow">
-                    <div class="card-body bg-primary text-light py-4 px-4">
-                        <h6 class="card-title"><b>Dijamin halal</b></h6>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3">
-            <a href="#" class="text-decoration-none">
-                <div class="card shadow">
-                    <div class="card-body bg-primary text-light py-4 px-4">
-                        <h6 class="card-title"><b>Barang boleh tukar</b></h6>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-
-    <div class="row mt-3">
-        <div class="col-md-3">
-            <a href="{{ url('headline/beauty-gurantee-wangdipulangkansemula') }}" class="text-decoration-none">
-                <div class="card shadow">
-                    <div class="card-body bg-primary text-light py-4 px-4">
-                        <h6 class="card-title"><b>Tiada bahan pengawet</b></h6>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3">
-            <a href="#" class="text-decoration-none">
-                <div class="card shadow">
-                    <div class="card-body bg-primary text-light py-4 px-4">
-                        <h6 class="card-title"><b>Boleh ganti baru</b></h6>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3">
-            <a href="#" class="text-decoration-none">
-                <div class="card shadow">
-                    <div class="card-body bg-primary text-light py-4 px-4">
-                        <h6 class="card-title"><b>Pasti berhasil</b></h6>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3">
-            <a href="#" class="text-decoration-none">
-                <div class="card shadow">
-                    <div class="card-body bg-primary text-light py-4 px-4">
-                        <h6 class="card-title"><b>Selamat digunakan</b></h6>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
+    @endforeach
 </div>
 @endsection
 
