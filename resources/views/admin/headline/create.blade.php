@@ -75,8 +75,7 @@
             </div>
             <div class="col-md-12">
                 <div class="form-group">
-                    <label for="browser">Choose your browser from the list:</label>
-  <input list="browsers" name="browser" id="browser">
+  <input list="browsers" class="form-control" name="browser" id="browser">
   <datalist id="browsers">
     <option value="Edge">
     <option value="Firefox">
