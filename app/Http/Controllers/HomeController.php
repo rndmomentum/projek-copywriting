@@ -30,7 +30,7 @@ class HomeController extends Controller
     public function index()
     {   
         $keywords = Keywords::orderBy('id','Desc')->paginate(7);
-        $business = Bussiness::all();
+        $business = Business::all();
         $emotion = Emotion::all();
 
         return view('home', compact('keywords', 'business', 'emotion'));
