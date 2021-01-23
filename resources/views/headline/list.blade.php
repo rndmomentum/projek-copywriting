@@ -17,75 +17,21 @@
                     <h5 class="mb-4"><b><i class="fas fa-filter"></i> SEARCH FILTER</b></h5>
 
                     <h6 class="font-weight-bolder">SELECT EMOTION</h6>
-                    <div class="form-group">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="emotion" id="e1" onclick="window.open(this.value)" value="{{ url('headline') }}/{{ $business }}/e1">
-                            <label class="form-check-label" for="e1">
-                                Need of Guarantee
-                            </label>
+                    @foreach($emotion as $e)
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="emotion" id="{{ $e->emotion_id }}" onclick="window.open(this.value)" value="{{ url('headline') }}/{{ $business }}/{{ $e->emotion_id }}">
+                                <label class="form-check-label" for="{{ $e->emotion_id }}">
+                                    {{ $e->emotion_text }}
+                                </label>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="emotion" id="e2" onclick="window.open(this.value)" value="{{ url('headline') }}/{{ $business }}/e2">
-                            <label class="form-check-label" for="e2">
-                                Need of Variety
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="emotion" id="e3" onclick="window.open(this.value)" value="{{ url('headline') }}/{{ $business }}/e3">
-                            <label class="form-check-label" for="e3">
-                                Need of Excellent
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="emotion" id="e4" onclick="window.open(this.value)" value="{{ url('headline') }}/{{ $business }}/e4">
-                            <label class="form-check-label" for="e4">
-                                Need of Recognition
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="emotion" id="e5" onclick="window.open(this.value)" value="{{ url('headline') }}/{{ $business }}/e5">
-                            <label class="form-check-label" for="e5">
-                                Need of Achievement
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="emotion" id="e6" onclick="window.open(this.value)" value="{{ url('headline') }}/{{ $business }}/e6">
-                            <label class="form-check-label" for="e6">
-                                Need of Love
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="emotion" id="e7" onclick="window.open(this.value)" value="{{ url('headline') }}/{{ $business }}/e7">
-                            <label class="form-check-label" for="e7">
-                                Need of Growth
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="emotion" id="e8" onclick="window.open(this.value)" value="{{ url('headline') }}/{{ $business }}/e8">
-                            <label class="form-check-label" for="e8">
-                                Need of Contribution
-                            </label>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
                 <div class="col-md-9">
                     <div class="row">
                         <div class="col-md-12">
-                            <h3>Available Headline for <b>"Jaminan pulangan wang"</b></h3>
+                            <h3>Available Headline for <b>"{{ $keyword }}"</b></h3>
                             <hr>
                         </div>
                     </div>
